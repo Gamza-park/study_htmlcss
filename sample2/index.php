@@ -17,16 +17,20 @@
 </head>
 <body>
     <header>
-        <h1><a href="http://localhost:8080/index.html"> OH MY GIRL's PROFILE</a></h1>
+        <h1><a href="http://localhost:8080/index.php"> OH MY GIRL's PROFILE</a></h1>
     </header>
     <nav>
         <ol>
             <?php
-            echo file_get_contents("list.txt")
+            echo file_get_contents("txt/list.txt")
             ?>
         </ol>
     </nav>
 
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ_9Ks4v91spJ8eie1hKskxjrg2AIPchQxaYTTrsj7j5tzK5Mpo&usqp=CAU" width="700" height="700"/>
+    <article>
+    <?php
+            echo file_get_contents("txt/".$_GET['id'].".txt")
+            ?>
+    </article>
 </body>
 </html>

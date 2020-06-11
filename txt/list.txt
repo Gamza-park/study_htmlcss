@@ -1,0 +1,3 @@
+<li><a href="http://localhost:8080/index.php?id=1"> BinNie </a></li>
+<li><a href="http://localhost:8080/index.php?id=2"> MiMi </a></li>
+<li><a href="http://localhost:8080/index.php?id=3"> YuA </a></li>
