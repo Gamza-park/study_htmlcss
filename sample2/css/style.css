@@ -6,38 +6,3 @@ body.black{
     background-color: black;
     color: white;
 }
-div.position{
-    float: right;
-}
-
-header{
-    border-bottom: solid violet 1px;
-    padding: 30px;}
-nav {
-    border-right: solid violet 1px;
-    width: 300px;
-    height: 600px;
-    float: left;
-}
-nav ol{
-    list-style: none;
-    padding-left: 0px;
-}
-#control{
-    float: right;
-}
-article {
-    float: left;
-    padding: 20px;
-}
-img {
-    float: left;
-    padding: 10px;
-    margin-right: 20px;
-}
-ul {
-    margin-left: 10px;
-}
-h2 {
-    font-size: 40px;
-}
