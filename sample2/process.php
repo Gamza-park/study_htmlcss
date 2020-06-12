@@ -1,6 +1,6 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "guddlf28");
-mysqli_select_db($conn, 'opentutorials');
+require("lib/db.php");
+$conn = db_init();
 
 $sql = "INSERT INTO topic (title, description, author, created) VALUES('".$_POST['title']."','".$_POST['description']."','".$_POST['author']."',now())";
 $result = mysqli_query($conn, $sql);
