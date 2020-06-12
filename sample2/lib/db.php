@@ -1,7 +1,7 @@
 <?php
-function db_init(){
-$conn = mysqli_connect("localhost", "root", "guddlf28");
-mysqli_select_db($conn, 'opentutorials');
+function db_init($host, $duser, $dpwd, $dname){
+$conn = mysqli_connect($host, $duser, $dpwd);
+mysqli_select_db($conn, $dname);
 return $conn;
 }
 ?>
