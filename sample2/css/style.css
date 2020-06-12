@@ -6,9 +6,10 @@ body.black{
     background-color: black;
     color: white;
 }
-#position{
+div.position{
     float: right;
 }
+
 header{
     border-bottom: solid violet 1px;
     padding: 30px;}
@@ -20,9 +21,12 @@ nav {
 }
 nav ol{
     list-style: none;
+    padding-left: 0px;
+}
+#control{
+    float: right;
 }
 article {
-    margin-left: 30px;
     float: left;
     padding: 20px;
 }

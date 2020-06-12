@@ -1,36 +1,46 @@
+<?php
+$conn = mysqli_connect("localhost", "root", "guddlf28");
+mysqli_select_db($conn, 'opentutorials');
+$result = mysqli_query($conn, 'SELECT*FROM topic');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <style>
-        header{
-            border-bottom: solid violet 1px;
-            padding: 30px;}
-        nav {
-            border-right: solid violet 1px;
-            width: 300px;
-            height: 600px;
-            float: left;
-        }
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/style.css">
 </head>
-<body>
+<body id="target">
     <header>
         <h1><a href="http://localhost:8080/index.php"> OH MY GIRL's PROFILE</a></h1>
     </header>
     <nav>
         <ol>
-            <?php
-            echo file_get_contents("txt/list.txt")
-            ?>
+        <?php
+        while($row = mysqli_fetch_assoc($result)){
+            echo '<li><a href="http://localhost:8080/index.php?id='.$row['id'].'">'.$row['title'].'</a></li>';
+        }
+        ?>
         </ol>
     </nav>
-
+    
+    
     <article>
-    <?php
-            echo file_get_contents("txt/".$_GET['id'].".txt")
-            ?>
+        <?php
+        if(empty($_GET['id'])===false){
+            $sql = 'SELECT*FROM topic WHERE id='.$_GET['id'];
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            echo '<h2>'.$row['title'].'</h2>';
+            echo $row['description'];
+        }
+        ?>
     </article>
+    <div id="control">
+    <input type="button" value="White" id="white_btn"/>
+    <input type="button" value="Black" id="black_btn"/>
+    <a href="http://localhost:8080/write.php">write</a>
+    </div>
+    <script src="http://localhost:8080/script.js"></script>
 </body>
 </html>
