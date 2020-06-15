@@ -1,0 +1,33 @@
+header{
+    border-bottom: 1px solid pink;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+body{
+    margin:0;
+}
+body.black{
+    background-color:black;
+    color:white;
+}
+body.white{
+    background-color:white;
+    color:black;
+}
+nav{
+    border-right: 1px solid pink;
+    width:200px;
+    height:800px;
+    float:left;
+}
+nav ol{
+    margin:0;
+    padding:20px;
+    list-style:none;
+}
+#content{
+    width: 400px;
+    float: left;
+    margin: 40px;          
+}
